@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 viewPassword.setText( editPassword.getText().toString());
 
                 Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
+                intent.putExtra("username",editUsername.getText().toString());
+                intent.putExtra("email", editEmail.getText().toString());
                 startActivity(intent);
             }
         });
