@@ -2,8 +2,10 @@ package com.example.firstapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -16,16 +18,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtnClick (View view) {
-        EditText editFirstName = findViewById(R.id.editTextFirstName);
-        EditText editLastName = findViewById(R.id.editTextLastName);
+        EditText editUsername = findViewById(R.id.editTextUsername);
         EditText editEmail = findViewById(R.id.editTextEmail);
+        EditText editPassword = findViewById(R.id.editTextPassword);
+        Button registerButton = findViewById(R.id.buttonRegister);
 
-        TextView viewFirstName = findViewById(R.id.textFirstName);
-        TextView viewLastName = findViewById(R.id.textLastName);
-        TextView viewEmail = findViewById(R.id.textEmail);
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView viewUsername = findViewById(R.id.editTextUsername);
+                TextView viewEmail = findViewById(R.id.editTextEmail);
+                TextView viewPassword = findViewById(R.id.editTextPassword);
 
-        viewFirstName.setText("First Name: " + editFirstName.getText().toString());
-        viewLastName.setText("Last Name: " + editLastName.getText().toString());
-        viewEmail.setText("Email: " + editEmail.getText().toString());
+                viewUsername.setText(editUsername.getText().toString());
+                viewEmail.setText(editEmail.getText().toString());
+                viewPassword.setText( editPassword.getText().toString());
+
+                Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
