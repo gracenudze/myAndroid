@@ -18,25 +18,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtnClick (View view) {
-        EditText editUsername = findViewById(R.id.editTextUsername);
-        EditText editEmail = findViewById(R.id.editTextEmail);
-        EditText editPassword = findViewById(R.id.editTextPassword);
-        Button registerButton = findViewById(R.id.buttonRegister);
+        EditText editUsername = findViewById(R.id.etUsername);
+        EditText editEmail = findViewById(R.id.etEmail);
+        EditText editPassword = findViewById(R.id.etPassword);
+        Button registerButton = findViewById(R.id.btnRegister);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView viewUsername = findViewById(R.id.editTextUsername);
-                TextView viewEmail = findViewById(R.id.editTextEmail);
-                TextView viewPassword = findViewById(R.id.editTextPassword);
+                TextView tvUsername = findViewById(R.id.etUsername);
+                TextView tvEmail = findViewById(R.id.etEmail);
+                TextView tvPassword = findViewById(R.id.etPassword);
 
-                viewUsername.setText(editUsername.getText().toString());
-                viewEmail.setText(editEmail.getText().toString());
-                viewPassword.setText( editPassword.getText().toString());
+                tvUsername.setText(editUsername.getText().toString());
+                tvEmail.setText(editEmail.getText().toString());
+                tvPassword.setText(editPassword.getText().toString());
 
                 Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
-                intent.putExtra("username",editUsername.getText().toString());
-                intent.putExtra("email", editEmail.getText().toString());
+                intent.putExtra(ConstantUtils.username, editUsername.getText().toString());
+                intent.putExtra(ConstantUtils.email, editEmail.getText().toString());
                 startActivity(intent);
             }
         });
