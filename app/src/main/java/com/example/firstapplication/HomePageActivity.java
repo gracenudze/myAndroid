@@ -15,8 +15,8 @@ public class HomePageActivity extends AppCompatActivity {
         TextView tvUsername = findViewById(R.id.tvUsername);
         TextView tvEmail = findViewById(R.id.tvEmail);
 
-        tvUsername.setText("Username: " + getIntent().getExtras().getString("username"));
-        tvEmail.setText("Email: " + getIntent().getExtras().getString("email"));
+        tvUsername.setText("Username: " + getIntent().getExtras().getString(ConstantUtils.username));
+        tvEmail.setText("Email: " + getIntent().getExtras().getString(ConstantUtils.email));
     }
 
 }

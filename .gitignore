@@ -1,4 +1,8 @@
 .idea
 .gradle
 local.properties
+.settings
+.project
+settings.gradle
+
 
