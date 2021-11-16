@@ -11,11 +11,11 @@
         android:id="@+id/etFirstName"
         android:layout_width="322dp"
         android:layout_height="61dp"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="212dp"
         android:hint="First Name"
         app:hintTextAppearance="@style/FloatingHintStyle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
