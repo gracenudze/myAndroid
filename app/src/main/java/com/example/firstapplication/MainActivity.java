@@ -18,25 +18,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtnClick (View view) {
-        EditText editUsername = findViewById(R.id.etUsername);
-        EditText editEmail = findViewById(R.id.etEmail);
-        EditText editPassword = findViewById(R.id.etPassword);
+        EditText etFirstName = findViewById(R.id.etFirstName);
+        EditText etLastName = findViewById(R.id.etLastName);
+        EditText etPassword = findViewById(R.id.etPassword);
+        EditText etPhoneNumber = findViewById(R.id.etPhone);
         Button registerButton = findViewById(R.id.btnRegister);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView tvUsername = findViewById(R.id.etUsername);
-                TextView tvEmail = findViewById(R.id.etEmail);
+                TextView tvFirstName = findViewById(R.id.etFirstName);
+                TextView tvLastName = findViewById(R.id.etLastName);
                 TextView tvPassword = findViewById(R.id.etPassword);
+                TextView tvPhoneNumber = findViewById(R.id.etPhone);
 
-                tvUsername.setText(editUsername.getText().toString());
-                tvEmail.setText(editEmail.getText().toString());
-                tvPassword.setText(editPassword.getText().toString());
+                tvFirstName.setText(etFirstName.getText().toString());
+                tvLastName.setText(etLastName.getText().toString());
+                tvPassword.setText(etPassword.getText().toString());
+                tvPhoneNumber.setText(etPhoneNumber.getText().toString());
 
                 Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
-                intent.putExtra(ConstantUtils.username, editUsername.getText().toString());
-                intent.putExtra(ConstantUtils.email, editEmail.getText().toString());
+                intent.putExtra(ConstantUtils.username, etFirstName.getText().toString());
+                intent.putExtra(ConstantUtils.email, etLastName.getText().toString());
                 startActivity(intent);
             }
         });
