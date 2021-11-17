@@ -9,12 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class RegisterUserActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register_user);
     }
 
     public void onBtnClick (View view) {
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 tvPassword.setText(etPassword.getText().toString());
                 tvPhoneNumber.setText(etPhoneNumber.getText().toString());
 
-                Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
+                Intent intent = new Intent(RegisterUserActivity.this, HomePageActivity.class);
                 intent.putExtra(ConstantUtils.username, etFirstName.getText().toString());
                 intent.putExtra(ConstantUtils.email, etLastName.getText().toString());
                 startActivity(intent);

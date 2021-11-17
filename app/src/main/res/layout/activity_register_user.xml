@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".RegisterUserActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etFirstName"
         android:layout_width="322dp"
         android:layout_height="61dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="215dp"
         android:hint="First Name"
         app:hintTextAppearance="@style/FloatingHintStyle"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,58 +20,71 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="335dp"
-            android:layout_height="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:gravity="top|left"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etLastName"
-        android:layout_width="326dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
         android:hint="Last Name"
-        android:inputType="textPersonName"
+        app:hintTextAppearance="@style/FloatingHintStyle"
         app:layout_constraintEnd_toEndOf="@+id/etFirstName"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="@+id/etFirstName"
-        app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+        app:layout_constraintTop_toBottomOf="@+id/etFirstName">
 
-    <EditText
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="top|left"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etPhone"
-        android:layout_width="331dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
         android:hint="Phone Number"
-        android:inputType="phone"
+        android:layout_marginTop="8dp"
+        app:hintTextAppearance="@style/FloatingHintStyle"
         app:layout_constraintEnd_toEndOf="@id/etLastName"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="@id/etLastName"
-        app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+        app:layout_constraintTop_toBottomOf="@+id/etLastName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="top|left"
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etPassword"
         android:layout_width="360dp"
         android:layout_height="72dp"
         android:hint="Password"
-        app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+        app:hintTextAppearance="@style/FloatingHintStyle"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@id/etPhone"
         app:layout_constraintRight_toRightOf="@id/etPhone"
         app:layout_constraintTop_toBottomOf="@id/etPhone"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="#808080">
+        app:passwordToggleTint="@color/grey">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="332dp"
-            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="15"
-            android:inputType="textPassword"
-            android:textStyle="bold" />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -79,37 +92,35 @@
         android:layout_width="360dp"
         android:layout_height="52dp"
         android:hint="Confirm Password"
-        app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+        app:hintTextAppearance="@style/FloatingHintStyle"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintLeft_toLeftOf="@id/etPassword"
         app:layout_constraintRight_toRightOf="@id/etPassword"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
         app:layout_constraintVertical_bias="0.369"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="#808080">
+        app:passwordToggleTint="@color/grey">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="339dp"
-            android:layout_height="47dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="15"
-            android:inputType="textPassword"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="397dp" />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="212dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="222dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/custom_button"
         android:onClick="onBtnClick"
         android:text="@string/sign_up"
-        android:textSize="20dp"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/etConfirmPassword"
-        app:layout_constraintHorizontal_bias="0.344"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="@+id/etConfirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
 
@@ -136,7 +147,7 @@
         android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
+        android:layout_marginStart="96dp"
         android:layout_marginTop="21dp"
         android:layout_marginBottom="27dp"
         android:text="Already have an account?"
@@ -144,21 +155,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvLogin_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="84dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="40dp"
         android:text="Login"
         android:textColor="@color/blue"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toEndOf="@+id/tvLogin"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister"
         app:layout_constraintVertical_bias="0.0" />
