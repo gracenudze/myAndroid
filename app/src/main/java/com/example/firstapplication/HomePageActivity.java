@@ -13,7 +13,8 @@ public class HomePageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         TextView tvUsername = findViewById(R.id.tvUsername);
-        tvUsername.setText("Username: " + getIntent().getExtras().getString(ConstantUtils.username));
+        tvUsername.setText(getIntent().getExtras().getString(ConstantUtils.firstName) + " " +
+                getIntent().getExtras().getString(ConstantUtils.lastName));
 
     }
 
