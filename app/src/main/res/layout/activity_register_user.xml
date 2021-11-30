@@ -8,7 +8,7 @@
     tools:context=".RegisterUserActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etFirstName"
+        android:id="@+id/etFirstNameWrapper"
         android:layout_width="322dp"
         android:layout_height="61dp"
         android:layout_marginTop="235dp"
@@ -20,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -28,18 +29,19 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etLastName"
+        android:id="@+id/etLastNameWrapper"
         android:layout_width="320dp"
         android:layout_height="55dp"
         android:hint="Last Name"
         app:hintTextAppearance="@style/FloatingHintStyle"
-        app:layout_constraintEnd_toEndOf="@+id/etFirstName"
+        app:layout_constraintEnd_toEndOf="@+id/etFirstNameWrapper"
         app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="@+id/etFirstName"
-        app:layout_constraintTop_toBottomOf="@+id/etFirstName">
+        app:layout_constraintStart_toStartOf="@+id/etFirstNameWrapper"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstNameWrapper">
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -48,18 +50,19 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etPhone"
+        android:id="@+id/etPhoneWrapper"
         android:layout_width="320dp"
         android:layout_height="55dp"
         android:hint="Phone Number"
         android:layout_marginTop="8dp"
         app:hintTextAppearance="@style/FloatingHintStyle"
-        app:layout_constraintEnd_toEndOf="@id/etLastName"
+        app:layout_constraintEnd_toEndOf="@id/etLastNameWrapper"
         app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="@id/etLastName"
-        app:layout_constraintTop_toBottomOf="@+id/etLastName">
+        app:layout_constraintStart_toStartOf="@id/etLastNameWrapper"
+        app:layout_constraintTop_toBottomOf="@+id/etLastNameWrapper">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -68,19 +71,20 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etPassword"
+        android:id="@+id/etPasswordWrapper"
         android:layout_width="360dp"
         android:layout_height="72dp"
         android:hint="Password"
         app:hintTextAppearance="@style/FloatingHintStyle"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@id/etPhone"
-        app:layout_constraintRight_toRightOf="@id/etPhone"
-        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        app:layout_constraintLeft_toLeftOf="@id/etPhoneWrapper"
+        app:layout_constraintRight_toRightOf="@id/etPhoneWrapper"
+        app:layout_constraintTop_toBottomOf="@id/etPhoneWrapper"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/grey">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="15"
@@ -88,20 +92,21 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etConfirmPassword"
+        android:id="@+id/etConfirmPasswordWrapper"
         android:layout_width="360dp"
         android:layout_height="52dp"
         android:hint="Confirm Password"
         app:hintTextAppearance="@style/FloatingHintStyle"
         app:layout_constraintHorizontal_bias="0.313"
-        app:layout_constraintLeft_toLeftOf="@id/etPassword"
-        app:layout_constraintRight_toRightOf="@id/etPassword"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintLeft_toLeftOf="@id/etPasswordWrapper"
+        app:layout_constraintRight_toRightOf="@id/etPasswordWrapper"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordWrapper"
         app:layout_constraintVertical_bias="0.369"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="@color/grey">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="15"
@@ -119,10 +124,10 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/etConfirmPassword"
+        app:layout_constraintEnd_toEndOf="@+id/etConfirmPasswordWrapper"
         app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/etConfirmPassword"
-        app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
+        app:layout_constraintStart_toStartOf="@+id/etConfirmPasswordWrapper"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmPasswordWrapper" />
 
     <TextView
         android:id="@+id/tvCreateAccount"
@@ -136,7 +141,7 @@
         android:textColor="#FFFF"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/etFirstName"
+        app:layout_constraintBottom_toTopOf="@+id/etFirstNameWrapper"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -173,6 +178,6 @@
         app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toEndOf="@+id/tvLogin"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister"
-        app:layout_constraintVertical_bias="0.652" />
+        app:layout_constraintVertical_bias="0.642" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

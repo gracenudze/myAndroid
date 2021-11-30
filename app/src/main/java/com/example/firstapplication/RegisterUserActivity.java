@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+
 public class RegisterUserActivity extends AppCompatActivity {
 
     @Override
@@ -18,10 +21,10 @@ public class RegisterUserActivity extends AppCompatActivity {
     }
 
     public void onBtnClick (View view) {
-        EditText etFirstName = findViewById(R.id.etFirstName);
-        EditText etLastName = findViewById(R.id.etLastName);
-        EditText etPassword = findViewById(R.id.etPassword);
-        EditText etPhoneNumber = findViewById(R.id.etPhone);
+        EditText etFirstName = (TextInputEditText) findViewById(R.id.etFirstName);
+        EditText etLastName = (TextInputEditText) findViewById(R.id.etLastName);
+        EditText etPassword = (TextInputEditText) findViewById(R.id.etPassword);
+        EditText etPhoneNumber = (TextInputEditText) findViewById(R.id.etPhone);
         Button registerButton = findViewById(R.id.btnRegister);
 
         registerButton.setOnClickListener(v -> {
