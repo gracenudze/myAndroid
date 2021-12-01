@@ -297,17 +297,19 @@
 
         </FrameLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/imageButton3"
             android:layout_width="79dp"
             android:layout_height="97dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
-            android:background="@android:color/transparent"
-            android:drawableTop="@drawable/roller"
-            android:drawablePadding="20dp"
+            android:background="@color/green"
             android:text="Start"
-            android:textColor="@android:color/white"
+            app:icon="@drawable/roller"
+            app:iconGravity="top"
+            app:iconSize="50dp"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvAllCategory" />
         <!--        style="@style/Widget.MaterialComponents.Button.Icon"-->
