@@ -10,65 +10,47 @@
         android:layout_height="wrap_content"
         tools:context=".HomePageActivity">
 
-            <LinearLayout
-                android:id="@+id/mytoolbar"
-                android:layout_width="414dp"
-                android:layout_height="88dp"
-                android:layout_marginHorizontal="15dp"
-                android:layout_marginTop="80dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.666"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnClean"
-                app:layout_constraintVertical_bias="0.0">
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="237dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="4dp"
+            android:ems="15"
+            android:text="Welcome"
+            android:textColor="@color/black"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.077"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            </LinearLayout>
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="295dp"
+            android:layout_height="35dp"
+            android:ems="15"
+            android:text="TextView"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.129"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
 
-            <TextView
-                android:id="@+id/tvWelcome"
-                android:layout_width="237dp"
-                android:layout_height="59dp"
-                android:layout_marginTop="4dp"
-                android:ems="15"
-                android:text="Welcome"
-                android:textColor="@color/black"
-                android:textSize="40dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.077"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btnNew"
+            android:layout_width="67dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_buttons"
+            android:text="New"
+            android:textAllCaps="false"
+            android:textColor="@color/darkPink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvUsername"  />
 
-            <TextView
-                android:id="@+id/tvUsername"
-                android:layout_width="295dp"
-                android:layout_height="35dp"
-                android:ems="15"
-                android:text="TextView"
-                android:textSize="25dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.129"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
-
-            <Button
-                android:id="@+id/btnNew"
-                android:layout_width="67dp"
-                android:layout_height="36dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/custom_buttons"
-                android:text="New"
-                android:textAllCaps="false"
-                android:textColor="@color/darkPink"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
-
-            <Button
+        <Button
                 android:id="@+id/btnTrending"
                 android:layout_width="68dp"
                 android:layout_height="37dp"
@@ -81,363 +63,388 @@
                 app:layout_constraintStart_toEndOf="@+id/btnNew"
                 app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
 
-            <Button
-                android:id="@+id/btnPopular"
-                android:layout_width="82dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/custom_buttons"
-                android:text="Popular"
-                android:textAllCaps="false"
-                android:textColor="@color/darkPink"
-                app:layout_constraintStart_toEndOf="@+id/btnTrending"
-                app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+        <Button
+            android:id="@+id/btnPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_buttons"
+            android:text="Popular"
+            android:textAllCaps="false"
+            android:textColor="@color/darkPink"
+            app:layout_constraintStart_toEndOf="@+id/btnTrending"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
 
-            <Button
-                android:id="@+id/btnServices"
-                android:layout_width="105dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/custom_buttons"
-                android:text="Top Services"
-                android:textAllCaps="false"
-                android:textColor="@color/darkPink"
-                app:layout_constraintStart_toEndOf="@+id/btnPopular"
-                app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+        <Button
+            android:id="@+id/btnServices"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_buttons"
+            android:text="Top Services"
+            android:textAllCaps="false"
+            android:textColor="@color/darkPink"
+            app:layout_constraintStart_toEndOf="@+id/btnPopular"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="185dp"
-                android:layout_height="122dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="19dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:padding="4dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnPopular"
-                app:srcCompat="@drawable/button_img"
-                android:background="@drawable/custom_buttons"
-                android:backgroundTint="@color/rosy_pink"/>
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="185dp"
+            android:layout_height="122dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="19dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:padding="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPopular"
+            app:srcCompat="@drawable/button_img"
+            android:background="@drawable/custom_buttons"
+            android:backgroundTint="@color/rosy_pink"/>
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="185dp"
-                android:layout_height="122dp"
-                android:layout_marginStart="23dp"
-                android:layout_marginTop="19dp"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:padding="4dp"
-                android:background="@drawable/custom_buttons"
-                android:backgroundTint="@color/dark_orchid"
-                app:layout_constraintStart_toEndOf="@+id/imageButton"
-                app:layout_constraintTop_toBottomOf="@+id/btnPopular"
-                app:srcCompat="@drawable/button2_img" />
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="185dp"
+            android:layout_height="122dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="19dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:padding="4dp"
+            android:background="@drawable/custom_buttons"
+            android:backgroundTint="@color/dark_orchid"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toBottomOf="@+id/btnPopular"
+            app:srcCompat="@drawable/button2_img" />
+
+        <TextView
+            android:id="@+id/tvAllCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:ems="15"
+            android:text="All Category"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="86dp"
+            android:ems="15"
+            android:text="Other Services"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameCommercial" />
+
+        <FrameLayout
+            android:id="@+id/frameClean"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <TextView
-                android:id="@+id/tvAllCategory"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:ems="15"
-                android:text="All Category"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Cleaning"
                 android:textColor="@color/black"
-                android:textSize="18dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="86dp"
-                android:ems="15"
-                android:text="Other Services"
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
-
-            <FrameLayout
+            <ImageButton
                 android:id="@+id/btnClean"
-                android:layout_width="wrap_content"
-                android:layout_height="94dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
+                android:layout_width="82dp"
+                android:layout_height="74dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/other_button"
+                android:backgroundTint="@color/honeydew"
+                android:padding="23dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cleaning_icon" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:clickable="false"
-                    android:text="Cleaning"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
+        </FrameLayout>
 
-                <ImageButton
-                    android:layout_width="82dp"
-                    android:layout_height="74dp"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/other_button"
-                    android:backgroundTint="@color/honeydew"
-                    android:padding="23dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/cleaning_icon" />
+        <FrameLayout
+            android:id="@+id/framePaint"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@id/frameClean"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
-            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Painting"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
-            <FrameLayout
+            <ImageButton
                 android:id="@+id/btnPaint"
-                android:layout_width="wrap_content"
-                android:layout_height="94dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="12dp"
-                app:layout_constraintStart_toEndOf="@id/btnClean"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
+                android:layout_width="82dp"
+                android:layout_height="74dp"
+                android:background="@drawable/other_button"
+                android:backgroundTint="@color/misty_pink"
+                android:padding="23dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/roller" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:clickable="false"
-                    android:text="Painting"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
+        </FrameLayout>
 
-                <ImageButton
-                    android:layout_width="82dp"
-                    android:layout_height="74dp"
-                    android:background="@drawable/other_button"
-                    android:backgroundTint="@color/misty_pink"
-                    android:padding="23dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/roller" />
+        <FrameLayout
+            android:id="@+id/frameVehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@id/framePaint"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
-            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Vehicle"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
-            <FrameLayout
+            <ImageButton
                 android:id="@+id/btnVehicle"
-                android:layout_width="wrap_content"
-                android:layout_height="94dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="12dp"
-                app:layout_constraintStart_toEndOf="@id/btnPaint"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
+                android:layout_width="82dp"
+                android:layout_height="74dp"
+                android:background="@drawable/other_button"
+                android:backgroundTint="@color/lavender"
+                android:padding="15dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/truck"
+                tools:layout_editor_absoluteX="243dp"
+                tools:layout_editor_absoluteY="540dp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:clickable="false"
-                    android:text="Vehicle"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
+        </FrameLayout>
 
-                <ImageButton
-                    android:layout_width="82dp"
-                    android:layout_height="74dp"
-                    android:background="@drawable/other_button"
-                    android:backgroundTint="@color/lavender"
-                    android:padding="15dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/truck"
-                    tools:layout_editor_absoluteX="243dp"
-                    tools:layout_editor_absoluteY="540dp" />
+        <FrameLayout
+            android:id="@+id/frameLabour"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/frameVehicle"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
-            </FrameLayout>
 
-            <FrameLayout
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Labour Services"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageButton
                 android:id="@+id/btnLabour"
-                android:layout_width="wrap_content"
-                android:layout_height="94dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="12dp"
-                app:layout_constraintStart_toEndOf="@id/btnVehicle"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
+                android:layout_width="82dp"
+                android:layout_height="74dp"
+                android:background="@drawable/other_button"
+                android:backgroundTint="@color/blue_boro"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/worker" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|bottom"
-                    android:clickable="false"
-                    android:text="Labour Services"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
+        </FrameLayout>
 
-                <ImageButton
-                    android:layout_width="82dp"
-                    android:layout_height="74dp"
-                    android:background="@drawable/other_button"
-                    android:backgroundTint="@color/blue_boro"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/worker" />
+        <FrameLayout
+            android:id="@+id/frameCommercial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAllCategory">
 
-            </FrameLayout>
+            <ImageButton
+                android:id="@+id/btnCommercial"
+                android:layout_width="85dp"
+                android:layout_height="110dp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/blue_lavender"
+                android:paddingTop="20dp"
+                android:paddingBottom="50dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/commercial_icon" />
 
-            <FrameLayout
-                android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvAllCategory">
+            <TextView
+                android:layout_width="66dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Commercial Shifting"
+                android:textColor="@color/sky_blue"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </FrameLayout>
 
-                <ImageButton
-                    android:layout_width="85dp"
-                    android:layout_height="110dp"
-                    android:background="@drawable/custom_buttons"
-                    android:backgroundTint="@color/blue_lavender"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="50dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/commercial_icon" />
+        <FrameLayout
+            android:id="@+id/frameCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@id/frameCommercial"
+            app:layout_constraintTop_toBottomOf="@+id/tvAllCategory">
 
-                <TextView
-                    android:layout_width="66dp"
-                    android:layout_height="41dp"
-                    android:layout_gravity="center|bottom"
-                    android:clickable="false"
-                    android:text="Commercial Shifting"
-                    android:textColor="@color/sky_blue"
-                    android:textSize="12dp"
-                    android:textStyle="bold" />
-            </FrameLayout>
+            <ImageButton
+                android:id="@+id/btnCar"
+                android:layout_width="85dp"
+                android:layout_height="112dp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/honeydew"
+                android:paddingTop="20dp"
+                android:paddingBottom="50dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toEndOf="@+id/imageButton3"
+                app:layout_constraintTop_toBottomOf="@+id/tvAllCategory"
+                app:srcCompat="@drawable/car_icon" />
 
-            <FrameLayout
-                android:id="@+id/imageButton7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                app:layout_constraintStart_toEndOf="@id/imageButton3"
-                app:layout_constraintTop_toBottomOf="@+id/tvAllCategory">
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Car and Vehicles"
+                android:textColor="@color/green"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </FrameLayout>
 
-                <ImageButton
-                    android:layout_width="85dp"
-                    android:layout_height="112dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageButton3"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAllCategory"
-                    app:srcCompat="@drawable/car_icon"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="50dp"
-                    android:scaleType="fitCenter"
-                    android:background="@drawable/custom_buttons"
-                    android:backgroundTint="@color/honeydew"/>
+        <FrameLayout
+            android:id="@+id/frameOffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/frameCar"
+            app:layout_constraintTop_toBottomOf="@+id/tvAllCategory">
 
-                <TextView
-                    android:layout_width="48dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center|bottom"
-                    android:clickable="false"
-                    android:text="Car and Vehicles"
-                    android:textColor="@color/green"
-                    android:textSize="12dp"
-                    android:textStyle="bold" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/imageButton8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
+            <ImageButton
+                android:id="@+id/btnOffice"
+                android:layout_width="85dp"
+                android:layout_height="112dp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/orange_linen"
+                android:paddingTop="20dp"
+                android:paddingBottom="52dp"
+                android:scaleType="fitCenter"
                 app:layout_constraintStart_toEndOf="@+id/imageButton7"
-                app:layout_constraintTop_toBottomOf="@+id/tvAllCategory">
+                app:layout_constraintTop_toBottomOf="@+id/tvAllCategory"
+                app:srcCompat="@drawable/office_icon" />
 
-                <ImageButton
-                    android:layout_width="85dp"
-                    android:layout_height="112dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageButton7"
-                    app:layout_constraintTop_toBottomOf="@+id/tvAllCategory"
-                    app:srcCompat="@drawable/office_icon"
-                    android:scaleType="fitCenter"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="52dp"
-                    android:background="@drawable/custom_buttons"
-                    android:backgroundTint="@color/orange_linen"/>
+            <TextView
+                android:layout_width="43dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Office Shifting"
+                android:textColor="@color/coral_orange"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </FrameLayout>
 
-                <TextView
-                    android:layout_width="43dp"
-                    android:layout_height="38dp"
-                    android:layout_gravity="center|bottom"
-                    android:clickable="false"
-                    android:text="Office Shifting"
-                    android:textColor="@color/coral_orange"
-                    android:textSize="12dp"
-                    android:textStyle="bold" />
-            </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toEndOf="@+id/frameOffice"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton2">
 
-            <FrameLayout
-                android:id="@+id/imageButton9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="60dp"
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="85dp"
+                android:layout_height="110dp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/misty_pink"
+                android:paddingTop="20dp"
+                android:paddingBottom="51dp"
+                android:scaleType="fitCenter"
                 app:layout_constraintStart_toEndOf="@+id/imageButton8"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton2">
+                app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+                app:srcCompat="@drawable/house_icon" />
 
-                <ImageButton
-                    android:layout_width="85dp"
-                    android:layout_height="110dp"
-                    app:layout_constraintStart_toEndOf="@+id/imageButton8"
-                    app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-                    app:srcCompat="@drawable/house_icon"
-                    android:scaleType="fitCenter"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="51dp"
-                    android:background="@drawable/custom_buttons"
-                    android:backgroundTint="@color/misty_pink"/>
+            <TextView
+                android:layout_width="43dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Home Sharing"
+                android:textColor="@color/crimson_red"
+                android:textSize="12dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="43dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center|bottom"
-                    android:clickable="false"
-                    android:text="Home Sharing"
-                    android:textColor="@color/crimson_red"
-                    android:textSize="12dp"
-                    android:textStyle="bold" />
-            </FrameLayout>
+        </FrameLayout>
 
+        <LinearLayout
+            android:id="@+id/mytoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="80dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameClean"
+            app:layout_constraintVertical_bias="0.0">
+        </LinearLayout>
 
+        <ImageButton
+            android:id="@+id/button"
+            android:layout_width="82dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="25dp"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_icon"
+            android:background="@drawable/other_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageButton
-                android:id="@+id/button"
-                android:layout_width="82dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="25dp"
-                android:padding="15dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/home_icon"
-                android:background="@drawable/other_button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageButton
-                android:id="@+id/button1"
-                android:layout_width="82dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="25dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/task_icon"
-                android:padding="15dp"
-                android:background="@drawable/other_button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button" />
+        <ImageButton
+            android:id="@+id/button1"
+            android:layout_width="82dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/task_icon"
+            android:padding="15dp"
+            android:background="@drawable/other_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button" />
 
             <ImageButton
                 android:id="@+id/button2"
@@ -452,17 +459,17 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/button1" />
 
-            <ImageButton
-                android:id="@+id/button3"
-                android:layout_width="82dp"
-                android:layout_height="64dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="25dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/user_icon"
-                android:padding="10dp"
-                android:background="@drawable/other_button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/button2" />
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="82dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/user_icon"
+            android:padding="10dp"
+            android:background="@drawable/other_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
