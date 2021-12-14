@@ -2,7 +2,7 @@ package com.example.firstapplication;
 
 import java.util.ArrayList;
 
-public class ButtonNames {
+public class ButtonNames{
     private String mName;
 
     public ButtonNames(String name) {

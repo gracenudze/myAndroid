@@ -1,7 +1,5 @@
 package com.example.firstapplication;
 
-import android.os.Handler;
-
 import java.util.ArrayList;
 
 public class ButtonImage {
