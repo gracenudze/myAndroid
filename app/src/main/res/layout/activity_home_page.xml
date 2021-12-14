@@ -38,42 +38,25 @@
             app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="412dp"
-            android:layout_height="99dp"
+            android:id="@+id/rvFirstButtons"
+            android:layout_width="411dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="185dp"
-            android:layout_height="122dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/custom_buttons"
-            android:backgroundTint="@color/rosy_pink"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSecondButtons"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-            app:srcCompat="@drawable/button_img" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="185dp"
-            android:layout_height="122dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="8dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/custom_buttons"
-            android:backgroundTint="@color/dark_orchid"
-            android:padding="4dp"
-            android:scaleType="fitCenter"
-            app:layout_constraintStart_toEndOf="@+id/imageButton"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-            app:srcCompat="@drawable/button2_img" />
+            app:layout_constraintTop_toBottomOf="@+id/rvFirstButtons" />
 
         <TextView
             android:id="@+id/tvAllCategory"
@@ -86,7 +69,7 @@
             android:textColor="@color/black"
             android:textSize="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+            app:layout_constraintTop_toBottomOf="@+id/rvSecondButtons" />
 
         <TextView
             android:id="@+id/textView"
@@ -332,7 +315,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="60dp"
             app:layout_constraintStart_toEndOf="@+id/frameOffice"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton2">
+            app:layout_constraintTop_toBottomOf="@+id/rvSecondButtons">
 
             <ImageButton
                 android:id="@+id/btnHome"
@@ -362,7 +345,7 @@
             android:id="@+id/bottom_navigation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:background="@color/white"
             app:itemIconTint="@color/light_pink"
             app:layout_constraintBottom_toBottomOf="parent"

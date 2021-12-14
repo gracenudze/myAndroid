@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class HomePageActivity extends AppCompatActivity {
 
     ArrayList<ButtonNames> buttonNames;
+    ArrayList<ButtonImage> buttonImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +24,32 @@ public class HomePageActivity extends AppCompatActivity {
                 .append(" ").append(getIntent().getExtras().getString(ConstantUtils.lastName)).toString());
 
         // Lookup the recyclerview in activity layout
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
-
-        // Initialize contacts
-        buttonNames = ButtonNames.createButtonNamesList(4);
-        // Create adapter passing in the sample user data
-         RecyclerViewAdapter adapter = new RecyclerViewAdapter(buttonNames);
+        RecyclerView recyclerView = findViewById(R.id.rvFirstButtons);
+        // Initialize buttons
+        String[] descriptions = {"New", "Trending", "Popular", "Top Services"};
+        buttonNames = ButtonNames.createButtonNamesList(descriptions);
+        // Create adapter passing in the button names
+         SectionOneAdapter adapter = new SectionOneAdapter(buttonNames);
         // Attach the adapter to the recyclerview to populate items
         recyclerView.setAdapter(adapter);
+        //Section Two RecyclerView Adapter
+        RecyclerView recyclerView1 = findViewById(R.id.rvSecondButtons);
+         int images[] = {
+                R.drawable.button_img,
+                R.drawable.button2_img,
+        };
+        buttonImage = ButtonImage.createButtonImageList(images);
+        SectionTwoAdapter adapter1 = new SectionTwoAdapter(buttonImage);
+        recyclerView1.setAdapter(adapter1);
         // Set layout manager to position the items
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        // That's all!
+        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager
+                (HomePageActivity.this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(horizontalLayoutManager);
+
+
+
+
+
+
     }
 }

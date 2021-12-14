@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <ImageButton
+        android:id="@+id/btnImg"
+        android:layout_width="200dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="16dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/custom_buttons"
+        android:backgroundTint="@color/rosy_pink"
+        android:padding="4dp"
+        android:scaleType="fitCenter"/>
+
+
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/imageButton2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="122dp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                android:background="@drawable/custom_buttons"-->
+<!--                android:backgroundTint="@color/dark_orchid"-->
+<!--                android:padding="4dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/button2_img" />-->
+</LinearLayout>
