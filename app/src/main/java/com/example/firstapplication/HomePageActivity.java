@@ -46,6 +46,10 @@ public class HomePageActivity extends AppCompatActivity {
                 (HomePageActivity.this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(horizontalLayoutManager);
 
+        LinearLayoutManager horizontalLayoutManager1 = new LinearLayoutManager(HomePageActivity.this,
+        LinearLayoutManager.HORIZONTAL, false);
+        recyclerView1.setLayoutManager(horizontalLayoutManager1);
+
 
 
 
