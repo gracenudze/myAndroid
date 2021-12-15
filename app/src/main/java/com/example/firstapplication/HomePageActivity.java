@@ -35,8 +35,8 @@ public class HomePageActivity extends AppCompatActivity {
         //Section Two RecyclerView Adapter
         RecyclerView recyclerView1 = findViewById(R.id.rvSecondButtons);
          int images[] = {
-                R.drawable.button_img,
-                R.drawable.button2_img,
+            R.drawable.button_img,
+            R.drawable.button2_img,
         };
         buttonImage = ButtonImage.createButtonImageList(images);
         SectionTwoAdapter adapter1 = new SectionTwoAdapter(buttonImage);
@@ -49,11 +49,5 @@ public class HomePageActivity extends AppCompatActivity {
         LinearLayoutManager horizontalLayoutManager1 = new LinearLayoutManager(HomePageActivity.this,
         LinearLayoutManager.HORIZONTAL, false);
         recyclerView1.setLayoutManager(horizontalLayoutManager1);
-
-
-
-
-
-
     }
 }

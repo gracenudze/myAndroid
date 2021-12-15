@@ -24,7 +24,7 @@ public class SectionTwoAdapter extends RecyclerView.Adapter<SectionTwoAdapter.Vi
 
         public ViewHolder( View itemView) {
             super(itemView);
-            btnImg = itemView.findViewById(R.id.btnImg);
+            btnImg = itemView.findViewById(R.id.btnDiscountShifty);
         }
     }
 
