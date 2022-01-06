@@ -71,15 +71,133 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rvSecondButtons" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvThirdButtons"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+        <FrameLayout
+            android:id="@+id/frameCommercial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvAllCategory" />
+            app:layout_constraintTop_toBottomOf="@+id/tvAllCategory">
+
+            <ImageButton
+                android:id="@+id/btnCommercial"
+                android:layout_width="85dp"
+                android:layout_height="110dp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/blue_lavender"
+                android:paddingTop="20dp"
+                android:paddingBottom="50dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/commercial_icon" />
+
+            <TextView
+                android:layout_width="66dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Commercial Shifting"
+                android:textColor="@color/sky_blue"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@id/frameCommercial"
+            app:layout_constraintTop_toBottomOf="@+id/tvAllCategory">
+
+            <ImageButton
+                android:id="@+id/btnCar"
+                android:layout_width="85dp"
+                android:layout_height="112dp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/honeydew"
+                android:paddingTop="20dp"
+                android:paddingBottom="50dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toEndOf="@+id/imageButton3"
+                app:layout_constraintTop_toBottomOf="@+id/tvAllCategory"
+                app:srcCompat="@drawable/car_icon" />
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Car and Vehicles"
+                android:textColor="@color/green"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameOffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/frameCar"
+            app:layout_constraintTop_toBottomOf="@+id/tvAllCategory">
+
+            <ImageButton
+                android:id="@+id/btnOffice"
+                android:layout_width="85dp"
+                android:layout_height="112dp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/orange_linen"
+                android:paddingTop="20dp"
+                android:paddingBottom="52dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toEndOf="@+id/imageButton7"
+                app:layout_constraintTop_toBottomOf="@+id/tvAllCategory"
+                app:srcCompat="@drawable/office_icon" />
+
+            <TextView
+                android:layout_width="43dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Office Shifting"
+                android:textColor="@color/coral_orange"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@+id/frameOffice"
+            app:layout_constraintTop_toBottomOf="@+id/tvAllCategory">
+
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="85dp"
+                android:layout_height="110dp"
+                android:background="@drawable/custom_buttons"
+                android:backgroundTint="@color/misty_pink"
+                android:paddingTop="20dp"
+                android:paddingBottom="51dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/house_icon" />
+
+            <TextView
+                android:layout_width="43dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center|bottom"
+                android:clickable="false"
+                android:text="Home Sharing"
+                android:textColor="@color/crimson_red"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </FrameLayout>
         <TextView
             android:id="@+id/tvOtherServices"
             android:layout_width="wrap_content"
@@ -94,7 +212,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rvThirdButtons" />
+            app:layout_constraintTop_toBottomOf="@+id/frameCommercial" />
 
         <FrameLayout
             android:id="@+id/frameClean"
@@ -224,7 +342,7 @@
             android:id="@+id/bottom_navigation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="70dp"
             android:background="@color/white"
             app:itemIconTint="@color/light_pink"
             app:layout_constraintBottom_toBottomOf="parent"
