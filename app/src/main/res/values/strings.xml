@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">FirstApplication</string>
     <string name="sign_up">Sign up</string>
+    <string name="bitcoin_explore_heading">Explore coins and shortlist them to invest later</string>
+    <string name="bitcoin_explore_body">Found interesting coins? Save it to your profile so
+                                        it's easy to go back for it later.</string>
 </resources>
