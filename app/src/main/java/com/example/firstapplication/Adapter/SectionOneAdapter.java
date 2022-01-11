@@ -1,4 +1,4 @@
-package com.example.firstapplication;
+package com.example.firstapplication.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.firstapplication.ButtonNames;
+import com.example.firstapplication.R;
 
 import java.util.List;
 

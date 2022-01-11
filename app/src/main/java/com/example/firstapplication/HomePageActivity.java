@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.firstapplication.Adapter.SectionOneAdapter;
+import com.example.firstapplication.Adapter.SectionTwoAdapter;
+
 import java.util.ArrayList;
 
 public class HomePageActivity extends AppCompatActivity {
