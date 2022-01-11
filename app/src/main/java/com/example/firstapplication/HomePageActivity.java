@@ -35,6 +35,11 @@ public class HomePageActivity extends AppCompatActivity {
          SectionOneAdapter adapter = new SectionOneAdapter(buttonNames);
         // Attach the adapter to the recyclerview to populate items
         recyclerView.setAdapter(adapter);
+        //setting layout
+        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager
+                (HomePageActivity.this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(horizontalLayoutManager);
+
         //Section Two RecyclerView Adapter
         RecyclerView recyclerView1 = findViewById(R.id.rvSecondButtons);
          int images[] = {
@@ -45,10 +50,6 @@ public class HomePageActivity extends AppCompatActivity {
         SectionTwoAdapter adapter1 = new SectionTwoAdapter(buttonImage);
         recyclerView1.setAdapter(adapter1);
         // Set layout manager to position the items
-        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager
-                (HomePageActivity.this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerView.setLayoutManager(horizontalLayoutManager);
-
         LinearLayoutManager horizontalLayoutManager1 = new LinearLayoutManager(HomePageActivity.this,
         LinearLayoutManager.HORIZONTAL, false);
         recyclerView1.setLayoutManager(horizontalLayoutManager1);
