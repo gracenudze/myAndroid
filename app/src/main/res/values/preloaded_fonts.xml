@@ -2,6 +2,9 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/allerta</item>
+        <item>@font/archivo_black</item>
+        <item>@font/candal</item>
         <item>@font/merriweather</item>
+        <item>@font/numans</item>
     </array>
 </resources>

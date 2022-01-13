@@ -13,11 +13,11 @@ import com.example.firstapplication.R;
 
 import java.util.List;
 
-public class SectionOneAdapter extends RecyclerView.Adapter<SectionOneAdapter.ViewHolder>{
+public class HomePageAdapterOne extends RecyclerView.Adapter<HomePageAdapterOne.ViewHolder>{
 
     private List<ButtonNames> mButtonNames;
 
-    public SectionOneAdapter(List<ButtonNames> buttonNames) {
+    public HomePageAdapterOne(List<ButtonNames> buttonNames) {
         this.mButtonNames = buttonNames;
 
     }

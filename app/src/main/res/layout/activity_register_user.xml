@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".HomePageActivity">
+        tools:context=".Activity.HomePageActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etFirstNameWrapper"

@@ -15,10 +15,10 @@ import com.example.firstapplication.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SectionTwoAdapter extends RecyclerView.Adapter<SectionTwoAdapter.ViewHolder> {
+public class HomePageAdapterTwo extends RecyclerView.Adapter<HomePageAdapterTwo.ViewHolder> {
     private List<ButtonImage> mImages;
 
-    public SectionTwoAdapter(ArrayList<ButtonImage> imageButtons) {
+    public HomePageAdapterTwo(ArrayList<ButtonImage> imageButtons) {
         this.mImages = imageButtons;
     }
 
@@ -41,7 +41,7 @@ public class SectionTwoAdapter extends RecyclerView.Adapter<SectionTwoAdapter.Vi
                 parent, false);
 
         // Return a new holder instance
-        SectionTwoAdapter.ViewHolder viewHolder = new SectionTwoAdapter.ViewHolder(buttonsView);
+        HomePageAdapterTwo.ViewHolder viewHolder = new HomePageAdapterTwo.ViewHolder(buttonsView);
         return viewHolder;
     }
 
