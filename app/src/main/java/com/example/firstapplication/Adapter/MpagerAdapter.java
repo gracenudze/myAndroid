@@ -8,17 +8,19 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.example.firstapplication.Activity.CryptoHomepageActivity;
+
 public class MpagerAdapter extends PagerAdapter {
     private int layouts[];
+    private LayoutInflater layoutInflater;
+    private Context context;
 
-    public MpagerAdapter(int[] layouts, LayoutInflater layoutInflater, Context context) {
+    public MpagerAdapter(int[] layouts, Context context) {
         this.layouts = layouts;
         this.layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.context = context;
     }
 
-    private LayoutInflater layoutInflater;
-    private Context context;
 
     @Override
     public int getCount() {
@@ -34,7 +36,13 @@ public class MpagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         View view = layoutInflater.inflate(layouts[position],container,false );
+        container.addView(view);
+        return view;
+    }
 
-        return super.instantiateItem(container, position);
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        View view = (View) object;
+        container.removeView(view);
     }
 }

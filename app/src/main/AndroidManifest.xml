@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activity.CryptoHomepageActivity"
+            android:name=".Activity.SecondSlideActivity"
             android:exported="false" />
-        <activity android:name=".Activity.SecondSlideActivity" />
+        <activity android:name=".Activity.CryptoHomepageActivity" />
         <activity android:name=".Activity.RegisterUserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

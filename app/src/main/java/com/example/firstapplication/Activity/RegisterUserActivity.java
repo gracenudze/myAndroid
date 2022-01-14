@@ -38,7 +38,7 @@ public class RegisterUserActivity extends AppCompatActivity {
             tvPassword.setText(etPassword.getText().toString());
             tvPhoneNumber.setText(etPhoneNumber.getText().toString());
 
-            Intent intent = new Intent(this, SecondSlideActivity.class);
+            Intent intent = new Intent(this, CryptoHomepageActivity.class);
 //            intent.putExtra(ConstantUtils.firstName, etFirstName.getText().toString());
 //            intent.putExtra(ConstantUtils.lastName, etLastName.getText().toString());
             startActivity(intent);
