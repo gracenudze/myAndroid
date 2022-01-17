@@ -33,41 +33,13 @@
         android:layout_marginStart="76dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="82dp"
-        android:fontFamily="sans-serif-thin"
+        android:fontFamily="sans-serif"
         android:text="@string/bitcoin_explore_body"
         android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvBitcoin_heading" />
-
-    <Button
-        android:id="@+id/btnSkip"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="60dp"
-        android:text="Skip"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvBitcoin_body" />
-
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="86dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="47dp"
-        android:background="@drawable/custom_button"
-        android:backgroundTint="@color/darklatesgray"
-        android:text="Next"
-        android:textSize="16dp"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvBitcoin_body" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
