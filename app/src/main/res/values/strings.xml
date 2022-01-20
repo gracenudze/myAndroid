@@ -9,5 +9,8 @@
     <string name="crypto_plan">Fastest and Secure platform to invest in crypto\. Track your
                                 cryptocurrency portfolio here</string>
     <string name="platform">Best trading platform and more reliable financial transactions</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
 
 </resources>

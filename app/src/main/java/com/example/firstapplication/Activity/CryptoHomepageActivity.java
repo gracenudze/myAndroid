@@ -23,11 +23,11 @@ public class CryptoHomepageActivity extends AppCompatActivity implements View.On
     private MpagerAdapter mpagerAdapter;
 
     //sliding dots
-    private LinearLayout dots_layout;
+    private LinearLayout layoutDots;
     private ImageView dots[];
 
     //buttons
-    private Button buttonNext, buttonSkip;
+    private Button btnNext, btnSkip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +38,14 @@ public class CryptoHomepageActivity extends AppCompatActivity implements View.On
         mpagerAdapter = new MpagerAdapter(layouts, this);
         mPager.setAdapter(mpagerAdapter);
 
-        dots_layout = (LinearLayout) findViewById(R.id.dotsLayout);
+        layoutDots = (LinearLayout) findViewById(R.id.dotsLayout);
         createDots(0);
 
-        buttonNext = (Button) findViewById(R.id.btnNext);
-        buttonSkip = (Button) findViewById(R.id.btnSkip);
+        btnNext = (Button) findViewById(R.id.btnNext);
+        btnSkip = (Button) findViewById(R.id.btnSkip);
 
-        buttonNext.setOnClickListener(this);
-        buttonSkip.setOnClickListener(this);
+        btnNext.setOnClickListener(this);
+        btnSkip.setOnClickListener(this);
 
         mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -57,12 +57,12 @@ public class CryptoHomepageActivity extends AppCompatActivity implements View.On
             public void onPageSelected(int position) {
                 createDots(position);
                 if (position == layouts.length -1 ) {
-                    buttonNext.setText("Start");
-                    buttonSkip.setVisibility(View.INVISIBLE);
+                    btnNext.setText(R.string.start);
+                    btnSkip.setVisibility(View.INVISIBLE);
                 }
                 else {
-                    buttonNext.setText("Next");
-                    buttonSkip.setVisibility(View.VISIBLE);
+                    btnNext.setText(R.string.next);
+                    btnSkip.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -74,8 +74,8 @@ public class CryptoHomepageActivity extends AppCompatActivity implements View.On
     }
 
     private void createDots(int current_position) {
-        if (dots_layout != null) {
-            dots_layout.removeAllViews();
+        if (layoutDots != null) {
+            layoutDots.removeAllViews();
         }
         dots = new ImageView[layouts.length];
 
@@ -91,7 +91,7 @@ public class CryptoHomepageActivity extends AppCompatActivity implements View.On
                     ViewGroup.LayoutParams.WRAP_CONTENT);
             params.setMargins(4,0,4,0);
 
-            dots_layout.addView(dots[i],params);
+            layoutDots.addView(dots[i],params);
         }
     }
 

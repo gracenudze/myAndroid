@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Activity.SecondSlideActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity android:name=".Activity.CryptoHomepageActivity" />
         <activity android:name=".Activity.RegisterUserActivity">
             <intent-filter>

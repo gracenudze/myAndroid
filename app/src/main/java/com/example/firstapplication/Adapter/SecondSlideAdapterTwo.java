@@ -41,10 +41,10 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        View bitconsView =inflater.inflate(R.layout.second_slide_items2,
+        View bitcoinsView =inflater.inflate(R.layout.second_slide_items2,
                 parent, false);
 
-        SecondSlideAdapterTwo.ViewHolder viewHolder = new SecondSlideAdapterTwo.ViewHolder(bitconsView);
+        SecondSlideAdapterTwo.ViewHolder viewHolder = new SecondSlideAdapterTwo.ViewHolder(bitcoinsView);
         return viewHolder;
 
     }
