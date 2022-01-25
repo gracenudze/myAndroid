@@ -1,4 +1,4 @@
-package com.example.firstapplication;
+package com.example.firstapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.firstapplication.R;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterUserActivity extends AppCompatActivity {
 
@@ -38,9 +38,9 @@ public class RegisterUserActivity extends AppCompatActivity {
             tvPassword.setText(etPassword.getText().toString());
             tvPhoneNumber.setText(etPhoneNumber.getText().toString());
 
-            Intent intent = new Intent(RegisterUserActivity.this, HomePageActivity.class);
-            intent.putExtra(ConstantUtils.firstName, etFirstName.getText().toString());
-            intent.putExtra(ConstantUtils.lastName, etLastName.getText().toString());
+            Intent intent = new Intent(this, CryptoHomepageActivity.class);
+//            intent.putExtra(ConstantUtils.firstName, etFirstName.getText().toString());
+//            intent.putExtra(ConstantUtils.lastName, etLastName.getText().toString());
             startActivity(intent);
         });
 
