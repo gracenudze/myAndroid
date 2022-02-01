@@ -4,11 +4,14 @@ public class SecondCryptoList {
     private int mBitcoinLogos;
     private String mBitcoinNames;
     private String mBitcoinEarnings;
+    private String mCurrencyExchange;
 
-    public SecondCryptoList(int bitcoin_logos, String bitcoin_names, String bitcoin_earnings) {
+    public SecondCryptoList(int bitcoin_logos, String bitcoin_names, String bitcoin_earnings,
+                            String currency_exchange) {
         this.mBitcoinLogos = bitcoin_logos;
         this.mBitcoinNames = bitcoin_names;
         this.mBitcoinEarnings = bitcoin_earnings;
+        this.mCurrencyExchange = currency_exchange;
     }
 
     public int getBitcoinLogos() {
@@ -21,5 +24,9 @@ public class SecondCryptoList {
 
     public String getBitcoinEarnings() {
         return mBitcoinEarnings;
+    }
+
+    public String getCurrencyExchange() {
+        return mCurrencyExchange;
     }
 }

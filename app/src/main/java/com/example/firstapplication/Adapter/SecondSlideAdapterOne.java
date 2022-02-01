@@ -1,6 +1,7 @@
 package com.example.firstapplication.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 
 public class SecondSlideAdapterOne extends RecyclerView.Adapter<SecondSlideAdapterOne.ViewHolder> {
     private ArrayList<FirstCryptoList> mFirstCryptoList;
-//    private ArrayList<String> mCryptoNames;
+    public String mColors[] = {"ffeeec", "#f9f7eb","#f9f7eb"};
 
     public SecondSlideAdapterOne(ArrayList<FirstCryptoList> firstCryptoList) {
         this.mFirstCryptoList = firstCryptoList;
@@ -59,6 +60,8 @@ public class SecondSlideAdapterOne extends RecyclerView.Adapter<SecondSlideAdapt
         cryptoPics.setEnabled(true);
 
         holder.imageName.setText(firstCryptoList1.getCryptoNames());
+
+//        cryptoPics.setBackgroundColor(Color.parseColor(mColors[position % mColors.length]));
 
     }
 

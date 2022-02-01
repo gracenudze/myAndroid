@@ -30,24 +30,34 @@ public class SecondSlideActivity extends AppCompatActivity {
     };
     int crypto_logos[] = {
             R.drawable.etherium_logo,
-            R.drawable.binance_logo,
             R.drawable.xrp_logo,
+            R.drawable.cardano_logo,
+            R.drawable.binance_logo,
             R.drawable.litecoin_logo,
-            R.drawable.cardano_logo
+
     };
     String crypto_names[] = {
-            "Eutherium",
-            "Binance",
+            "Ethereum",
             "XRP",
+            "Cardano",
+            "Binance",
             "Litecoin",
-            "Cardano"
+
     };
     String crypto_earnings[] = {
-            "$4,549.5",
-            "$5,678.9",
-            "$8,930.6",
-            "$9,421.7",
-            "$6,211.1"
+            "$4,549.06",
+            "$3,234.23",
+            "$2,543.54",
+            "$1,324.32",
+            "$921.76"
+    };
+
+    String currency_exchange[] = {
+            "0,80 ETH",
+            "0,30 XRP",
+            "0,26 ADA",
+            "0,15 BNB",
+            "0,90 LTC"
     };
 
     @Override
@@ -82,7 +92,7 @@ public class SecondSlideActivity extends AppCompatActivity {
         int count = 0;
         for (String names: crypto_names) {
             SecondCryptoList secondCryptoList = new SecondCryptoList(crypto_logos[count],names,
-                    crypto_earnings[count]);
+                    crypto_earnings[count], currency_exchange[count]);
             this.secondCryptoList.add(secondCryptoList);
             count++;
         }

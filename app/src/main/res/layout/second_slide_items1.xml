@@ -7,29 +7,25 @@
 
     <FrameLayout
         android:id="@+id/frameCrypto"
-        android:layout_width="120dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp">
+        android:layout_width="180dp"
+        android:layout_height="181dp"
+        android:background="@drawable/shadow_10493" >
 
         <ImageView
             android:id="@+id/ivCrypto"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:background="@drawable/custom_buttons"
-            android:backgroundTint="@color/white"
-            android:paddingTop="10dp"
-            android:paddingStart="10dp"
-            android:paddingBottom="70dp"
+            android:layout_width="48dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
             android:scaleType="fitStart"
             android:src="@drawable/bitcoin_logo" />
 
         <TextView
             android:id="@+id/tvCryptoNames"
-            android:layout_width="90dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="40dp"
             android:clickable="false"
             android:fontFamily="@font/allerta"
             android:textColor="@color/black"

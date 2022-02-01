@@ -6,46 +6,50 @@
 
 
     <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_buttons"
-        android:backgroundTint="@color/white"
-        android:layout_marginTop="15dp">
+        android:layout_width="430dp"
+        android:layout_height="150dp"
+        android:background="@drawable/shadow_10493">
 
         <ImageView
             android:id="@+id/ivBitcoinLogos"
-            android:layout_width="72dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="60dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/custom_buttons"
-            android:backgroundTint="@color/lavender"
-            android:padding="15dp"
+            android:padding="10dp"
             app:srcCompat="@drawable/etherium_logo" />
 
         <TextView
             android:id="@+id/tvBitcoinNames"
             android:layout_width="105dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="115dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="25dp"
             android:fontFamily="sans-serif"
             android:text=""
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18dp" />
 
         <TextView
             android:id="@+id/tvBitcoinEarnings"
-            android:layout_width="120dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="285dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginStart="275dp"
+            android:layout_marginTop="28dp"
+            android:text=""
             android:textColor="@color/black"
-            android:textSize="23dp"
-            android:textStyle="bold"
-            android:text="" />
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tvCurrencyExchange"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="55dp"
+            android:text=""
+            android:textSize="13dp" />
 
 
     </FrameLayout>

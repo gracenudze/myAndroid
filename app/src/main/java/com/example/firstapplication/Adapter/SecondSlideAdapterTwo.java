@@ -1,6 +1,7 @@
 package com.example.firstapplication.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,8 @@ import java.util.ArrayList;
 
 public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapterTwo.ViewHolder> {
     private ArrayList <SecondCryptoList> mSecondCryptoList;
+    String colors[] = {"#f0f2f9", "ebf0fb", "ecfafa", "fcf1ea", "e6ddf0"};
+
 
     public SecondSlideAdapterTwo(ArrayList<SecondCryptoList> secondCryptoList) {
         this.mSecondCryptoList = secondCryptoList;
@@ -26,6 +29,7 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
         ImageView bitcoinLogos;
         TextView bitcoinNames;
         TextView earnings;
+        TextView currencyExchange;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -33,6 +37,7 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
             bitcoinLogos = itemView.findViewById(R.id.ivBitcoinLogos);
             bitcoinNames = itemView.findViewById(R.id.tvBitcoinNames);
             earnings = itemView.findViewById(R.id.tvBitcoinEarnings);
+            currencyExchange = itemView.findViewById(R.id.tvCurrencyExchange);
         }
     }
     @NonNull
@@ -58,6 +63,8 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
 
         holder.bitcoinNames.setText(secondCryptoList.getBitcoinNames());
         holder.earnings.setText(secondCryptoList.getBitcoinEarnings());
+        holder.currencyExchange.setText(secondCryptoList.getCurrencyExchange());
+//        bitcoinLogos.setBackgroundColor(Color.parseColor(colors[position % 4]));
     }
 
     @Override

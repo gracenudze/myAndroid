@@ -11,9 +11,8 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/custom_button"
-        android:backgroundTint="@color/sky_blue"
+        android:layout_marginTop="17dp"
+        android:background = "@drawable/custom_button"
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,21 +22,20 @@
         android:id="@+id/btnNotification"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="65dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/custom_button"
-        android:backgroundTint="@color/sky_blue"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/tvHolding"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/notification_bell" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvHolding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="92dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/allerta"
         android:text="Holding Portfolio"
         android:textColor="@color/white"
@@ -46,45 +44,43 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvmoneyholding"
+        android:id="@+id/tvPortfolio"
         android:layout_width="176dp"
         android:layout_height="49dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="14dp"
         android:fontFamily="sans-serif"
-        android:text="$11,784.93"
+        android:text="$11,784.43"
         android:textColor="@color/white"
-        android:textSize="33dp"
+        android:textSize="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHolding" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFirstView"
         android:layout_width="412dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="68dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvmoneyholding" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPortfolio" />
 
     <TextView
         android:id="@+id/tvRecommendation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="34dp"
         android:fontFamily="@font/allerta"
-        android:text="Recommended To Buy"
-        android:textSize="22dp"
+        android:text="Recommend To Buy"
+        android:textSize="18dp"
         android:textColor="@color/black"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvFirstView" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSecondView"
         android:layout_width="414dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
+        android:layout_height="300dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRecommendation" />
 
@@ -99,4 +95,15 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
+
+    <TextView
+        android:id="@+id/tvUpdatedEarnings"
+        android:layout_width="77dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="184dp"
+        android:text="$5,503.34"
+        android:textColor="@color/lavender"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPortfolio" />
 </androidx.constraintlayout.widget.ConstraintLayout>
