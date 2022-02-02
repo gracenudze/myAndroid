@@ -37,7 +37,7 @@
 >>>>>>> 6dd54416544f737123158010298a86a385aed31d
             android:scaleType="fitStart"
             android:src="@drawable/bitcoin_logo" />
-
+        
         <TextView
             android:id="@+id/tvCryptoNames"
 <<<<<<< HEAD
