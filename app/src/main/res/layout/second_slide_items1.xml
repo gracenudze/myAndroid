@@ -24,12 +24,38 @@
             android:id="@+id/tvCryptoNames"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
             android:layout_marginStart="40dp"
+            android:layout_marginTop="65dp"
             android:clickable="false"
             android:fontFamily="@font/allerta"
             android:textColor="@color/black"
             android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="34dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="80dp"
+            app:srcCompat="@drawable/up_logo" />
+
+        <TextView
+            android:id="@+id/tvCryptoHoldings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="90dp"
+            android:text=""
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvCryptoPercentages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="90dp"
+            android:text=""
+            android:textStyle="bold"/>
     </FrameLayout>
 
 </LinearLayout>

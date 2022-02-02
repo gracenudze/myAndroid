@@ -18,6 +18,7 @@ public class SecondSlideActivity extends AppCompatActivity {
     ArrayList<FirstCryptoList> firstCryptoList = new ArrayList<>();
     ArrayList<SecondCryptoList> secondCryptoList = new ArrayList<>();
 
+    //first crypto list
     int crypto_images[] = { R.drawable.bitcoin_logo, R.drawable.dodgecoin, R.drawable.chainlink };
 
     String cryptoNames[] = { "Bitcoin", "Dodge coin", "Chain link" };
@@ -28,6 +29,12 @@ public class SecondSlideActivity extends AppCompatActivity {
             R.drawable.litecoin_logo
     };
 
+    String crypto_holdings[] = {"$3.4", "$2.4", "$1.4"};
+
+    String crypto_percent[] = {"+5,78%", "+4,68%", "+3.25%"};
+
+
+    //second crypto list
     String crypto_names[] = { "Ethereum", "XRP", "Cardano", "Binance", "Litecoin" };
 
     String crypto_earnings[] = { "$4,549.06", "$3,234.23", "$2,543.54", "$1,324.32",
@@ -39,6 +46,8 @@ public class SecondSlideActivity extends AppCompatActivity {
     };
 
     String tempHoldings[] = { "$3,440,08", "$2,330.04", "$1,540.05", "$1056.43", "$821.65" };
+
+    String percentages[] = {"+5,78%", "+4,56%", "+3,54%", "-1,78%", "-2,06%"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +72,8 @@ public class SecondSlideActivity extends AppCompatActivity {
     private void createFirstCryptoList() {
         int count = 0;
         for (String names: cryptoNames) {
-            FirstCryptoList firstCryptoList = new FirstCryptoList(crypto_images[count], names);
+            FirstCryptoList firstCryptoList = new FirstCryptoList(crypto_images[count], names,
+                    crypto_holdings[count], crypto_percent[count]);
             this.firstCryptoList.add(firstCryptoList);
             count++;
         }
@@ -72,7 +82,8 @@ public class SecondSlideActivity extends AppCompatActivity {
         int count = 0;
         for (String names: crypto_names) {
             SecondCryptoList secondCryptoList = new SecondCryptoList(crypto_logos[count],names,
-                    crypto_earnings[count], currency_exchange[count], tempHoldings[count]);
+                    crypto_earnings[count], currency_exchange[count], tempHoldings[count],
+                    percentages[count]);
             this.secondCryptoList.add(secondCryptoList);
             count++;
         }

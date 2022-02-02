@@ -18,7 +18,6 @@ import java.util.ArrayList;
 
 public class SecondSlideAdapterOne extends RecyclerView.Adapter<SecondSlideAdapterOne.ViewHolder> {
     private ArrayList<FirstCryptoList> mFirstCryptoList;
-    public String mColors[] = {"ffeeec", "#f9f7eb","#f9f7eb"};
 
     public SecondSlideAdapterOne(ArrayList<FirstCryptoList> firstCryptoList) {
         this.mFirstCryptoList = firstCryptoList;
@@ -26,15 +25,18 @@ public class SecondSlideAdapterOne extends RecyclerView.Adapter<SecondSlideAdapt
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 //        FrameLayout imageFrame;
-        ImageView image;
-        TextView imageName;
+        ImageView cryptoIcons, holdingsLogo;
+        TextView imageName, cryptoHoldings, cryptoPercents;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
 //            imageFrame = itemView.findViewById(R.id.frameCrypto);
-            image = itemView.findViewById(R.id.ivCrypto);
+            cryptoIcons = itemView.findViewById(R.id.ivCrypto);
             imageName = itemView.findViewById(R.id.tvCryptoNames);
+            holdingsLogo = itemView.findViewById(R.id.ivLogo);
+            cryptoHoldings = itemView.findViewById(R.id.tvCryptoHoldings);
+            cryptoPercents = itemView.findViewById(R.id.tvCryptoPercentages);
         }
     }
     @NonNull
@@ -55,14 +57,18 @@ public class SecondSlideAdapterOne extends RecyclerView.Adapter<SecondSlideAdapt
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         FirstCryptoList firstCryptoList1 = mFirstCryptoList.get(position);
-        ImageView cryptoPics = holder.image;
+        ImageView cryptoPics = holder.cryptoIcons;
         cryptoPics.setImageResource(firstCryptoList1.getCryptoImages());
         cryptoPics.setEnabled(true);
 
         holder.imageName.setText(firstCryptoList1.getCryptoNames());
+        holder.holdingsLogo.setColorFilter(Color.rgb(104,188,176));
 
-//        cryptoPics.setBackgroundColor(Color.parseColor(mColors[position % mColors.length]));
+        holder.cryptoHoldings.setText(firstCryptoList1.getCryptoHoldings());
+        holder.cryptoHoldings.setTextColor(Color.rgb(104,188,176));
 
+        holder.cryptoPercents.setText(firstCryptoList1.getCryptoPercent());
+        holder.cryptoPercents.setTextColor(Color.rgb(104,188,176));
     }
 
     @Override

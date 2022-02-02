@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firstapplication.R;
@@ -21,7 +20,7 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
     private ArrayList <SecondCryptoList> mSecondCryptoList;
 
     int color[] = { R.color.lavender,R.color.blue_lavender, R.color.honeydew,
-            R.color.orange_linen, R.color.misty_pink};
+            R.color.orange_linen, R.color.light_gray};
 
 
     public SecondSlideAdapterTwo(ArrayList<SecondCryptoList> secondCryptoList) {
@@ -29,11 +28,9 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView bitcoinLogos;
-        TextView bitcoinNames;
-        TextView earnings;
-        TextView currencyExchange;
-        TextView tempHoldings;
+        ImageView bitcoinLogos,holdingsLogo;
+        TextView bitcoinNames,currencyExchange, earnings, tempHoldings, percentages;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -43,6 +40,8 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
             earnings = itemView.findViewById(R.id.tvBitcoinEarnings);
             currencyExchange = itemView.findViewById(R.id.tvCurrencyExchange);
             tempHoldings = itemView.findViewById(R.id.tvTempHoldings);
+            holdingsLogo = itemView.findViewById(R.id.ivLogo);
+            percentages = itemView.findViewById(R.id.tvPercentages);
         }
     }
     @NonNull
@@ -71,13 +70,19 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
         holder.earnings.setText(secondCryptoList.getBitcoinEarnings());
         holder.currencyExchange.setText(secondCryptoList.getCurrencyExchange());
         holder.tempHoldings.setText(secondCryptoList.getTempHoldings());
+        holder.percentages.setText(secondCryptoList.getPercentages());
 
         if (position % 5 == 3 || (position % 5 == 4))
         {
             holder.tempHoldings.setTextColor(Color.rgb(229,150,150));
+            holder.holdingsLogo.setImageResource(R.drawable.down_logo);
+            holder.holdingsLogo.setColorFilter(Color.rgb(229,150,150));
+            holder.percentages.setTextColor(Color.rgb(229,150,150));
         }
         else {
             holder.tempHoldings.setTextColor(Color.rgb(104,188,176));
+            holder.holdingsLogo.setColorFilter(Color.rgb(104,188,176));
+            holder.percentages.setTextColor(Color.rgb(104,188,176));
         }
     }
 

@@ -5,10 +5,15 @@ import java.util.ArrayList;
 public class FirstCryptoList {
     private int mCryptoImages;
     private String mCryptoNames;
+    private String mCryptoHoldings;
+    private String mCryptoPercent;
 
-    public FirstCryptoList(int imageViews, String cryptoNames) {
+    public FirstCryptoList(int imageViews, String cryptoNames, String cryptoHoldings,
+                           String cryptoPercent) {
         this.mCryptoImages = imageViews;
         this.mCryptoNames = cryptoNames;
+        this.mCryptoHoldings = cryptoHoldings;
+        this.mCryptoPercent = cryptoPercent;
     }
 
     public int getCryptoImages() {
@@ -18,15 +23,13 @@ public class FirstCryptoList {
     public String getCryptoNames() {
         return mCryptoNames;
     }
-//    public static ArrayList<CryptoList> createCryptoImages(int[] cryptoPictures) {
-//        ArrayList<CryptoList> cryptoImages = new ArrayList<>();
-//        int imageNum = cryptoPictures.length;
-//
-//        for (int i = 0; i < imageNum; i++) {
-//            cryptoImages.add(new CryptoList(cryptoPictures[i]));
-//        }
-//        return cryptoImages;
-//    }
 
+    public String getCryptoHoldings() {
+        return mCryptoHoldings;
+    }
+
+    public String getCryptoPercent() {
+        return mCryptoPercent;
+    }
 
 }
