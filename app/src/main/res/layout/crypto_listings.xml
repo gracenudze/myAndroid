@@ -58,8 +58,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFirstView"
-        android:layout_width="438dp"
-        android:layout_height="177dp"
+        android:layout_width="395dp"
+        android:layout_height="183dp"
         android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPortfolio" />
