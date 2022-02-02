@@ -51,6 +51,24 @@
             android:text=""
             android:textSize="13dp" />
 
+        <TextView
+            android:id="@+id/tvTempHoldings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="267dp"
+            android:layout_marginTop="55dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/ivUpLogo"
+            android:layout_width="34dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="45dp"
+            app:srcCompat="@drawable/up_logo" />
+
 
     </FrameLayout>
 </LinearLayout>

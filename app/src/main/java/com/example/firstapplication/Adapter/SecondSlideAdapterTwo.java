@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firstapplication.R;
@@ -18,7 +19,9 @@ import java.util.ArrayList;
 
 public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapterTwo.ViewHolder> {
     private ArrayList <SecondCryptoList> mSecondCryptoList;
-    String colors[] = {"#f0f2f9", "ebf0fb", "ecfafa", "fcf1ea", "e6ddf0"};
+
+    int color[] = { R.color.lavender,R.color.blue_lavender, R.color.honeydew,
+            R.color.orange_linen, R.color.misty_pink};
 
 
     public SecondSlideAdapterTwo(ArrayList<SecondCryptoList> secondCryptoList) {
@@ -30,6 +33,7 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
         TextView bitcoinNames;
         TextView earnings;
         TextView currencyExchange;
+        TextView tempHoldings;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -38,6 +42,7 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
             bitcoinNames = itemView.findViewById(R.id.tvBitcoinNames);
             earnings = itemView.findViewById(R.id.tvBitcoinEarnings);
             currencyExchange = itemView.findViewById(R.id.tvCurrencyExchange);
+            tempHoldings = itemView.findViewById(R.id.tvTempHoldings);
         }
     }
     @NonNull
@@ -59,12 +64,21 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
         SecondCryptoList secondCryptoList = mSecondCryptoList.get(position);
         ImageView bitcoinLogos = holder.bitcoinLogos;
         bitcoinLogos.setImageResource(secondCryptoList.getBitcoinLogos());
+        bitcoinLogos.setBackgroundResource(color[position]);
         bitcoinLogos.setEnabled(true);
 
         holder.bitcoinNames.setText(secondCryptoList.getBitcoinNames());
         holder.earnings.setText(secondCryptoList.getBitcoinEarnings());
         holder.currencyExchange.setText(secondCryptoList.getCurrencyExchange());
-//        bitcoinLogos.setBackgroundColor(Color.parseColor(colors[position % 4]));
+        holder.tempHoldings.setText(secondCryptoList.getTempHoldings());
+
+        if (position % 5 == 3 || (position % 5 == 4))
+        {
+            holder.tempHoldings.setTextColor(Color.rgb(229,150,150));
+        }
+        else {
+            holder.tempHoldings.setTextColor(Color.rgb(104,188,176));
+        }
     }
 
     @Override

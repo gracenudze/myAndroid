@@ -12,8 +12,8 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="17dp"
-        android:background = "@drawable/custom_button"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
+        android:padding="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back_icon" />
@@ -106,4 +106,29 @@
         android:textSize="17dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPortfolio" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/rvFirstView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/up_logo"
+        app:tint="@color/white"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="32dp"
+        android:text="View All"
+        android:textSize="18dp"
+        android:textColor="@color/sierra_blue"
+        android:textStyle="bold"
+        android:fontFamily="@font/allerta"
+        app:layout_constraintStart_toEndOf="@+id/tvRecommendation"
+        app:layout_constraintTop_toBottomOf="@+id/rvFirstView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

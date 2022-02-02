@@ -18,47 +18,27 @@ public class SecondSlideActivity extends AppCompatActivity {
     ArrayList<FirstCryptoList> firstCryptoList = new ArrayList<>();
     ArrayList<SecondCryptoList> secondCryptoList = new ArrayList<>();
 
-    int crypto_images[] = {
-            R.drawable.bitcoin_logo,
-            R.drawable.dodgecoin,
-            R.drawable.chainlink,
-    };
-    String cryptoNames[] = {
-            "Bitcoin",
-            "Dodge coin",
-            "Chain link"
-    };
+    int crypto_images[] = { R.drawable.bitcoin_logo, R.drawable.dodgecoin, R.drawable.chainlink };
+
+    String cryptoNames[] = { "Bitcoin", "Dodge coin", "Chain link" };
+
     int crypto_logos[] = {
-            R.drawable.etherium_logo,
-            R.drawable.xrp_logo,
-            R.drawable.cardano_logo,
-            R.drawable.binance_logo,
-            R.drawable.litecoin_logo,
-
+            R.drawable.etherium_logo, R.drawable.xrp_logo,
+            R.drawable.cardano_logo, R.drawable.binance_logo,
+            R.drawable.litecoin_logo
     };
-    String crypto_names[] = {
-            "Ethereum",
-            "XRP",
-            "Cardano",
-            "Binance",
-            "Litecoin",
 
-    };
-    String crypto_earnings[] = {
-            "$4,549.06",
-            "$3,234.23",
-            "$2,543.54",
-            "$1,324.32",
+    String crypto_names[] = { "Ethereum", "XRP", "Cardano", "Binance", "Litecoin" };
+
+    String crypto_earnings[] = { "$4,549.06", "$3,234.23", "$2,543.54", "$1,324.32",
             "$921.76"
     };
 
-    String currency_exchange[] = {
-            "0,80 ETH",
-            "0,30 XRP",
-            "0,26 ADA",
-            "0,15 BNB",
+    String currency_exchange[] = { "0,80 ETH", "0,30 XRP", "0,26 ADA", "0,15 BNB",
             "0,90 LTC"
     };
+
+    String tempHoldings[] = { "$3,440,08", "$2,330.04", "$1,540.05", "$1056.43", "$821.65" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +72,7 @@ public class SecondSlideActivity extends AppCompatActivity {
         int count = 0;
         for (String names: crypto_names) {
             SecondCryptoList secondCryptoList = new SecondCryptoList(crypto_logos[count],names,
-                    crypto_earnings[count], currency_exchange[count]);
+                    crypto_earnings[count], currency_exchange[count], tempHoldings[count]);
             this.secondCryptoList.add(secondCryptoList);
             count++;
         }
