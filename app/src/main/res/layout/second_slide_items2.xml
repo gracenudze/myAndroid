@@ -6,6 +6,7 @@
 
 
     <FrameLayout
+<<<<<<< HEAD
         android:layout_width="430dp"
         android:layout_height="150dp"
         android:background="@drawable/shadow_10493">
@@ -19,21 +20,48 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/custom_buttons"
             android:padding="10dp"
+=======
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_buttons"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/ivBitcoinLogos"
+            android:layout_width="72dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custom_buttons"
+            android:backgroundTint="@color/lavender"
+            android:padding="15dp"
+>>>>>>> 6dd54416544f737123158010298a86a385aed31d
             app:srcCompat="@drawable/etherium_logo" />
 
         <TextView
             android:id="@+id/tvBitcoinNames"
             android:layout_width="105dp"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_marginStart="120dp"
             android:layout_marginTop="25dp"
             android:fontFamily="sans-serif"
             android:text=""
+=======
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text=""
+            android:textStyle="bold"
+>>>>>>> 6dd54416544f737123158010298a86a385aed31d
             android:textColor="@color/black"
             android:textSize="18dp" />
 
         <TextView
             android:id="@+id/tvBitcoinEarnings"
+<<<<<<< HEAD
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="275dp"
@@ -78,6 +106,16 @@
             android:text=""
             android:textStyle="bold"
             android:textSize="13dp"/>
+=======
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="285dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            android:text="" />
+>>>>>>> 6dd54416544f737123158010298a86a385aed31d
 
 
     </FrameLayout>

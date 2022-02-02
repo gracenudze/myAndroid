@@ -1,7 +1,10 @@
 package com.example.firstapplication.Adapter;
 
 import android.content.Context;
+<<<<<<< HEAD
 import android.graphics.Color;
+=======
+>>>>>>> 6dd54416544f737123158010298a86a385aed31d
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,18 +22,27 @@ import java.util.ArrayList;
 public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapterTwo.ViewHolder> {
     private ArrayList <SecondCryptoList> mSecondCryptoList;
 
+<<<<<<< HEAD
     int color[] = { R.color.lavender,R.color.blue_lavender, R.color.honeydew,
             R.color.orange_linen, R.color.light_gray};
 
 
+=======
+>>>>>>> 6dd54416544f737123158010298a86a385aed31d
     public SecondSlideAdapterTwo(ArrayList<SecondCryptoList> secondCryptoList) {
         this.mSecondCryptoList = secondCryptoList;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+<<<<<<< HEAD
         ImageView bitcoinLogos,holdingsLogo;
         TextView bitcoinNames,currencyExchange, earnings, tempHoldings, percentages;
 
+=======
+        ImageView bitcoinLogos;
+        TextView bitcoinNames;
+        TextView earnings;
+>>>>>>> 6dd54416544f737123158010298a86a385aed31d
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -38,10 +50,13 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
             bitcoinLogos = itemView.findViewById(R.id.ivBitcoinLogos);
             bitcoinNames = itemView.findViewById(R.id.tvBitcoinNames);
             earnings = itemView.findViewById(R.id.tvBitcoinEarnings);
+<<<<<<< HEAD
             currencyExchange = itemView.findViewById(R.id.tvCurrencyExchange);
             tempHoldings = itemView.findViewById(R.id.tvTempHoldings);
             holdingsLogo = itemView.findViewById(R.id.ivLogo);
             percentages = itemView.findViewById(R.id.tvPercentages);
+=======
+>>>>>>> 6dd54416544f737123158010298a86a385aed31d
         }
     }
     @NonNull
@@ -63,11 +78,15 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
         SecondCryptoList secondCryptoList = mSecondCryptoList.get(position);
         ImageView bitcoinLogos = holder.bitcoinLogos;
         bitcoinLogos.setImageResource(secondCryptoList.getBitcoinLogos());
+<<<<<<< HEAD
         bitcoinLogos.setBackgroundResource(color[position]);
+=======
+>>>>>>> 6dd54416544f737123158010298a86a385aed31d
         bitcoinLogos.setEnabled(true);
 
         holder.bitcoinNames.setText(secondCryptoList.getBitcoinNames());
         holder.earnings.setText(secondCryptoList.getBitcoinEarnings());
+<<<<<<< HEAD
         holder.currencyExchange.setText(secondCryptoList.getCurrencyExchange());
         holder.tempHoldings.setText(secondCryptoList.getTempHoldings());
         holder.percentages.setText(secondCryptoList.getPercentages());
@@ -84,6 +103,8 @@ public class SecondSlideAdapterTwo extends RecyclerView.Adapter<SecondSlideAdapt
             holder.holdingsLogo.setColorFilter(Color.rgb(104,188,176));
             holder.percentages.setTextColor(Color.rgb(104,188,176));
         }
+=======
+>>>>>>> 6dd54416544f737123158010298a86a385aed31d
     }
 
     @Override
