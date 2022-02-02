@@ -14,6 +14,7 @@ public class FirstCryptoList {
         this.mCryptoNames = cryptoNames;
         this.mCryptoHoldings = cryptoHoldings;
         this.mCryptoPercent = cryptoPercent;
+
     }
 
     public int getCryptoImages() {
