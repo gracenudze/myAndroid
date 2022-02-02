@@ -11,16 +11,11 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-<<<<<<< HEAD
-        android:layout_marginTop="17dp"
-        android:scaleType="fitCenter"
         android:padding="0dp"
-=======
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="18dp"
         android:background="@drawable/custom_button"
         android:backgroundTint="@color/sky_blue"
         android:scaleType="centerCrop"
->>>>>>> 6dd54416544f737123158010298a86a385aed31d
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back_icon" />
@@ -29,37 +24,22 @@
         android:id="@+id/btnNotification"
         android:layout_width="48dp"
         android:layout_height="48dp"
-<<<<<<< HEAD
-        android:layout_marginStart="65dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="15dp"
         android:padding="0dp"
-        android:scaleType="fitCenter"
         app:layout_constraintStart_toEndOf="@+id/tvHolding"
-=======
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="15dp"
         android:background="@drawable/custom_button"
-        android:backgroundTint="@color/sky_blue"
+        android:backgroundTint="#9cb1dd"
         android:scaleType="centerCrop"
-        app:layout_constraintStart_toEndOf="@+id/textView"
->>>>>>> 6dd54416544f737123158010298a86a385aed31d
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/notification_bell" />
 
     <TextView
-<<<<<<< HEAD
         android:id="@+id/tvHolding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="92dp"
         android:layout_marginTop="30dp"
-=======
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="24dp"
->>>>>>> 6dd54416544f737123158010298a86a385aed31d
         android:fontFamily="@font/allerta"
         android:text="Holding Portfolio"
         android:textColor="@color/white"
@@ -68,7 +48,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-<<<<<<< HEAD
         android:id="@+id/tvPortfolio"
         android:layout_width="176dp"
         android:layout_height="49dp"
@@ -83,65 +62,30 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFirstView"
-        android:layout_width="395dp"
-        android:layout_height="183dp"
+        android:layout_width="391dp"
+        android:layout_height="187dp"
         android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPortfolio" />
-=======
-        android:id="@+id/tvmoneyholding"
-        android:layout_width="176dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="sans-serif"
-        android:text="$11,784.93"
-        android:textColor="@color/white"
-        android:textSize="33dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvFirstView"
-        android:layout_width="412dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="68dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvmoneyholding" />
->>>>>>> 6dd54416544f737123158010298a86a385aed31d
 
     <TextView
         android:id="@+id/tvRecommendation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginStart="30dp"
         android:layout_marginTop="34dp"
         android:fontFamily="@font/allerta"
         android:text="Recommend To Buy"
         android:textSize="18dp"
         android:textColor="@color/black"
-=======
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="34dp"
-        android:fontFamily="@font/allerta"
-        android:text="Recommended To Buy"
-        android:textSize="22dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
->>>>>>> 6dd54416544f737123158010298a86a385aed31d
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvFirstView" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSecondView"
         android:layout_width="414dp"
-<<<<<<< HEAD
         android:layout_height="300dp"
-=======
-        android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
->>>>>>> 6dd54416544f737123158010298a86a385aed31d
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRecommendation" />
 
@@ -156,7 +100,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
-<<<<<<< HEAD
 
     <TextView
         android:id="@+id/tvUpdatedEarnings"
@@ -181,7 +124,7 @@
         app:tint="@color/white"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvViewAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="88dp"
@@ -193,6 +136,4 @@
         android:fontFamily="@font/allerta"
         app:layout_constraintStart_toEndOf="@+id/tvRecommendation"
         app:layout_constraintTop_toBottomOf="@+id/rvFirstView" />
-=======
->>>>>>> 6dd54416544f737123158010298a86a385aed31d
 </androidx.constraintlayout.widget.ConstraintLayout>
