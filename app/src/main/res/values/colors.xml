@@ -2,12 +2,14 @@
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="black">#000000</color>
+    <color name="darklatesgray">#1e2e46</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="blue">#2641F8</color>
     <color name="blue_lavender">#d6e7ef</color>
     <color name="sky_blue">#6bceec</color>
     <color name="orange_linen">#fbeee5</color>
+    <color name="gray">#F4F4F4</color>
     <color name="grey">#808080</color>
     <color name="darkPink">#c49ca4</color>
     <color name="rosy_pink">#e7557c</color>
@@ -17,6 +19,7 @@
     <color name="crimson_red">#d80027</color>
     <color name="dark_orchid">#9846d6</color>
     <color name="pink">#EB1460</color>
+    <color name="light_gray">#cdd4dc</color>
     <color name="light_pink">#f4a9bc</color>
     <color name="purple">#9C1AB1</color>
     <color name="blue_boro">#cbddeb</color>
@@ -24,6 +27,7 @@
     <color name="indigo">#3D4DB7</color>
     <color name="sea_blue">#1093F5</color>
     <color name="misty_pink">#fee3e8</color>
+    <color name="sierra_blue">#9bbcf0</color>
     <color name="lavender">#e6ddf0</color>
     <color name="honeydew">#e3f5e7</color>
     <color name="light_blue">#00A6F6</color>
@@ -42,4 +46,5 @@
     <color name="crop__button_text">#666666</color>
     <color name="crop__selector_pressed">#1a000000</color>
     <color name="crop__selector_focused">#77000000</color>
+    <color name="inactive_dots">#83878b</color>
 </resources>

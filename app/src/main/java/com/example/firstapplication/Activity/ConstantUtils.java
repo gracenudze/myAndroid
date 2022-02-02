@@ -1,4 +1,4 @@
-package com.example.firstapplication;
+package com.example.firstapplication.Activity;
 
 public class ConstantUtils {
     static String firstName = "firstName";

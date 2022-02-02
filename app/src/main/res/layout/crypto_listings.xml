@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bitcoin_background2">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:scaleType="fitCenter"
+        android:padding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon" />
+
+    <ImageButton
+        android:id="@+id/btnNotification"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="15dp"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/tvHolding"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notification_bell" />
+
+    <TextView
+        android:id="@+id/tvHolding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/allerta"
+        android:text="Holding Portfolio"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPortfolio"
+        android:layout_width="176dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="sans-serif"
+        android:text="$11,784.43"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHolding" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFirstView"
+        android:layout_width="395dp"
+        android:layout_height="183dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPortfolio" />
+
+    <TextView
+        android:id="@+id/tvRecommendation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="34dp"
+        android:fontFamily="@font/allerta"
+        android:text="Recommend To Buy"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvFirstView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSecondView"
+        android:layout_width="414dp"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecommendation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <TextView
+        android:id="@+id/tvUpdatedEarnings"
+        android:layout_width="77dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="184dp"
+        android:text="$5,503.34"
+        android:textColor="@color/lavender"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPortfolio" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/rvFirstView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/up_logo"
+        app:tint="@color/white"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="32dp"
+        android:text="View All"
+        android:textSize="18dp"
+        android:textColor="@color/sierra_blue"
+        android:textStyle="bold"
+        android:fontFamily="@font/allerta"
+        app:layout_constraintStart_toEndOf="@+id/tvRecommendation"
+        app:layout_constraintTop_toBottomOf="@+id/rvFirstView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

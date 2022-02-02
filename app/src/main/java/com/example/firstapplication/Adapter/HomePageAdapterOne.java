@@ -1,4 +1,4 @@
-package com.example.firstapplication;
+package com.example.firstapplication.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,13 +8,16 @@ import android.widget.Button;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.firstapplication.ButtonNames;
+import com.example.firstapplication.R;
+
 import java.util.List;
 
-public class SectionOneAdapter extends RecyclerView.Adapter<SectionOneAdapter.ViewHolder>{
+public class HomePageAdapterOne extends RecyclerView.Adapter<HomePageAdapterOne.ViewHolder>{
 
     private List<ButtonNames> mButtonNames;
 
-    public SectionOneAdapter(List<ButtonNames> buttonNames) {
+    public HomePageAdapterOne(List<ButtonNames> buttonNames) {
         this.mButtonNames = buttonNames;
 
     }
